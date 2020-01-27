@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {Link} from 'react-router-dom'
 import ItemData from "./ItemData";
 
 export default function ItemPage(props) {
@@ -21,9 +22,9 @@ export default function ItemPage(props) {
             <p>{post.text}</p>
             <h3 style={{color:post.color}}>My color is {post.color}</h3>
             <button>
-                <a href={"/list"} style={{textDecoration: 'none', color: 'black'}}>
+                <Link to={"/list"} style={{textDecoration: 'none', color: 'black'}}>
                     Return to List
-                </a>
+                </Link>
             </button>
         </div>
     )
